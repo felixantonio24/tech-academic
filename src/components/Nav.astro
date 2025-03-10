@@ -1,0 +1,95 @@
+<nav class="container-nav">
+    <span class="logo">TechSchool</span>
+
+    <ul class="contenedor-nav_li" id="nav-menu">
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Galería</a></li>
+        <li><a href="#">Talleres</a></li>
+    </ul>
+</nav>
+
+<style>
+    :root {
+        --negro: black;
+        --blanco: white;
+        --rojo: red;
+    }
+
+    .container-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+        background-color: var(--negro);
+        color: var(--blanco);
+        position: relative;
+    }
+   
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--blanco);
+        cursor: pointer;
+    }
+
+    .contenedor-nav_li {
+        display: flex;
+        gap: 2em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contenedor-nav_li li a {
+        text-decoration: none;
+        color: var(--blanco);
+        transition: color 0.3s;
+    }
+
+    .contenedor-nav_li li a:hover {
+        color: var(--rojo);
+    }
+
+    /* Responsive para móviles y tablets */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .contenedor-nav_li {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--negro);
+            width: 100%;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .contenedor-nav_li.active {
+            display: flex;
+        }
+
+        .contenedor-nav_li li {
+            padding: 1em 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        #nav-menu{
+            display: none;
+        }
+
+    }
+</style>
+
+
+

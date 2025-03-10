@@ -1,0 +1,33 @@
+---
+
+import Header from '../components/Header.astro'
+import Nav from '../components/Nav.astro'
+import Section from '../components/Section.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="shortcut icon" href="/instituto-de-gobierno.png" type="image/x-icon">
+		<title>TechAcademic</title>
+	</head>
+	<body>
+		<Nav />
+		<Header/>
+		<Section />
+		<script src="/scripts/main.js" defer></script>
+	</body>
+	<style>
+		body{
+
+    padding: 0;
+    box-sizing: border-box;
+	top: 0;
+	background-color: black;
+     }
+
+	</style>
+	
+</html>
